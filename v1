@@ -1,0 +1,43 @@
+local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
+local ESP = 
+local SILENT = loadstring(game:HttpGet("https://raw.githubusercontent.com/1kidskidder/v4/main/1237",true))()
+
+local w1 = library:Window("DevWareCC") -- Text
+
+w1:Button(
+    "Resolver",
+    function()
+        print("loadstring(game:HttpGet("https://raw.githubusercontent.com/1kidskidder/v4/main/resolver",true))()")
+    end
+) -- Text, Callback
+
+w1:Toggle(
+    "Fake Freeze",
+    "frz",
+    false,
+    function(toggled)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = toggled
+    end
+) -- Text, Flag, Enabled, Callback, Flag Location (Optional)
+
+w1:Toggle(
+    "Silent",
+    "frz",
+    false,
+    function(toggled)
+        SILENT:TRUE = toggled
+    end
+) -- Text, Flag, Enabled, Callback, Flag Location (Optional)
+
+w1:Button(
+    "Destroy GUI",
+    function()
+        for i, v in pairs(game.CoreGui:GetChildren()) do
+            if v:FindFirstChild("Top") then
+                v:Destroy()
+            end
+        end
+    end
+) -- Text, Callback
+
+w1:Label("By Somedude_r") -- Text
